@@ -65,32 +65,32 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="vxod\App.xaml">
+    <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="vxod\calendar.xaml.cs">
+    <Compile Include="calendar.xaml.cs">
       <DependentUpon>calendar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Core\Disciplina.cs" />
     <Compile Include="Core\Month.cs" />
     <Compile Include="Core\Semestr.cs" />
     <Compile Include="Core\Week.cs" />
-    <Page Include="vxod\AuthorizationWindow.xaml">
+    <Page Include="AuthorizationWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="vxod\App.xaml.cs">
+    <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\Day.cs" />
     <Compile Include="Core\Lesson.cs" />
-    <Compile Include="vxod\AuthorizationWindow.xaml.cs">
+    <Compile Include="AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="vxod\calendar.xaml">
+    <Page Include="calendar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="calendar\" />
+    <Folder Include="vxod\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />
