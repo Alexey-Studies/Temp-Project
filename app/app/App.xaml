@@ -5,15 +5,17 @@
               xmlns:fa="http://schemas.fontawesome.io/icons/"
              StartupUri="calendar.xaml">
     <Application.Resources>
-                                <ResourceDictionary>
+        <!-- дополнения для авторизации (material design)-->
+         <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
 
+        <!-- календарь к годам -->
         <Style x:Key="button" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="#bababa"/>
@@ -24,14 +26,31 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border BorderThickness="0">
-                            <!-- 4 04 -->
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
 
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#c73f69"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Foreground" Value="#8a2b42"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
-
+        <Style x:Key="angle" TargetType="fa:ImageAwesome">
+            <Setter Property="Width" Value="13"/>
+            <Setter Property="Height" Value="13"/>
+            <Setter Property="Margin" Value="0 3 0 0"/>
+            <Setter Property="Foreground" Value="{Binding Path=Foreground,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Button}}}" />
+        </Style>
+        <!-- календарь к Месяцам-->
+        <Style x:Key="buttonMonth" TargetType="Button" BasedOn="{StaticResource button}">
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        
     </Application.Resources>
 </Application>

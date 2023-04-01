@@ -25,11 +25,36 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 30">
+                <!-- панелька года -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 30">
                     <Button>
-                        <fa:ImageAwesome Icon="AngleLeft"/>
+                        <fa:ImageAwesome Icon="AngleLeft" Style="{StaticResource angle}"/>
+                    </Button>
+
+                    <Button Content="2022" Style="{StaticResource button}"/>
+                    <Button Content="2023" Style="{StaticResource button}" FontSize="24" Foreground="#c76f69" />
+                    <Button Content="2024" Style="{StaticResource button}"/>
+                    <Button Content="2025" Style="{StaticResource button}"/>
+                    <Button>
+                        <fa:ImageAwesome Icon="AngleRight" Style="{StaticResource angle}"/>
                     </Button>
                 </StackPanel>
+            </StackPanel>
+
+            <!-- панелька Месяцов -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="1" Style="{StaticResource buttonMonth}"/>
+                <Button Content="2" Style="{StaticResource buttonMonth}"/>
+                <Button Content="3" Style="{StaticResource buttonMonth}"/>
+                <Button Content="4" Style="{StaticResource buttonMonth}"/>
+                <Button Content="5" Style="{StaticResource buttonMonth}"/>
+                <Button Content="6" Style="{StaticResource buttonMonth}"/>
+                <Button Content="7" Style="{StaticResource buttonMonth}"/>
+                <Button Content="8" Style="{StaticResource buttonMonth}"/>
+                <Button Content="9" Style="{StaticResource buttonMonth}"/>
+                <Button Content="10" Style="{StaticResource buttonMonth}"/>
+                <Button Content="11" Style="{StaticResource buttonMonth}"/>
+                <Button Content="12" Style="{StaticResource buttonMonth}"/>
             </StackPanel>
         </Grid>
 
