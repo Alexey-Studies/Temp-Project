@@ -18,7 +18,7 @@
         <Border CornerRadius="20 0 0 20" Background="#fefefe"/>
 
         <Border CornerRadius="20 0 0 20" MouseDown="Border_MouseDown" 
-                Background="#c73f69" Grid.Column="1"/>
+                Background="#Fa8072" Grid.Column="1"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.2*"/>
