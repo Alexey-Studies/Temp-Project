@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-
+using System;
 namespace app
 {
 
@@ -11,7 +11,7 @@ namespace app
     {
         public MainWindow()
         {
-            InitializeComponent();// test coment
+            InitializeComponent();
         }
     }
 
