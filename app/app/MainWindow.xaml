@@ -6,12 +6,25 @@
         xmlns:local="clr-namespace:app"
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Вход" Height="450" Width="800">
+        Title="Вход" Height="600" Width="1000">
     <Grid Background="gray">
         <Border MinWidth="300" Margin="15" Background="white" VerticalAlignment="Center" Padding="40" MaxWidth="500" CornerRadius="15">
             <Border.Effect>
-                <DropShadowEffect>
+                <DropShadowEffect BlurRadius="50" Color="LightCyan" ShadowDepth="0"/>
             </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                
+                
+                <TextBox materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <PasswordBox materialDesign:HintAssist.Hint="повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <TextBox materialDesign:HintAssist.Hint="Введите Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация" Margin="0,16,0,-16"/>
+                    <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton }" Margin="0,16,0,-16"/>
+                </Grid>
+            </StackPanel>
         </Border>
         
     </Grid>
