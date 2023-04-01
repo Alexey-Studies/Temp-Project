@@ -66,6 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="calendar.xaml.cs">
+      <DependentUpon>calendar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Disciplina.cs" />
     <Compile Include="Month.cs" />
     <Compile Include="Semestr.cs" />
@@ -84,6 +87,10 @@
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
