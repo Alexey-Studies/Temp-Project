@@ -23,7 +23,7 @@ namespace app
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();//hfhkjdfkgdfkjgdjkfgjhdfg
         }
     }
 
