@@ -9,12 +9,12 @@ app
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Source\Repos\projekt_KI-21\app\app\App.xaml
-2-811537915
+C:\Users\Admin\Source\Repos\projekt_KI-21\app\app\vxod\App.xaml
+21207402092
 
-131520990160
-16-565836267
-AuthorizationWindow.xaml;calendar.xaml;
+13907534438
+17-1829036683
+vxod\AuthorizationWindow.xaml;calendar\calendar.xaml;
 
-True
+False
 
