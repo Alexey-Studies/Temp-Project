@@ -72,6 +72,12 @@
     <Compile Include="calendar.xaml.cs">
       <DependentUpon>calendar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="calendar\Item.xaml.cs">
+      <DependentUpon>Item.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="calendar\menuBottom.xaml.cs">
+      <DependentUpon>menuBottom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Core\Disciplina.cs" />
     <Compile Include="Core\Month.cs" />
     <Compile Include="Core\Semestr.cs" />
@@ -94,6 +100,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="calendar\Item.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="calendar\menuBottom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -113,7 +127,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Core\packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,7 +137,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="calendar\" />
     <Folder Include="vxod\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

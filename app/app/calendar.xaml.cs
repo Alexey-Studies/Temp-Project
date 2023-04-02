@@ -17,9 +17,9 @@ namespace app
     /// <summary>
     /// Логика взаимодействия для calendar.xaml
     /// </summary>
-    public partial class calendar : Window
+    public partial class Calendar : Window
     {
-        public calendar()
+        public Calendar()
         {
             InitializeComponent();
         }
@@ -30,6 +30,45 @@ namespace app
             {
                 this.DragMove();
             }
+        }
+
+        private void lblNote_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtNote.Focus();
+        }
+
+        private void txtNote_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNote.Text) && txtNote.Text.Length > 0)
+            {
+                lblNote.Visibility = Visibility.Collapsed;
+            }
+            else 
+            {
+                lblNote.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void lblTime_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtTime.Focus();
+        }
+
+        private void txtTime_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTime.Text) && txtTime.Text.Length > 0) 
+            {
+                lblTime.Visibility= Visibility.Collapsed;
+            }
+            else 
+            {
+                lblTime.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Item_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
