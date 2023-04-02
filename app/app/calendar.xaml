@@ -17,11 +17,31 @@
         </Grid.ColumnDefinitions>
         <Border CornerRadius="20 0 0 20" Background="#fefefe"/>
 
-        <Border CornerRadius="20 0 0 20" MouseDown="Border_MouseDown" 
-                Background="#Fa8072" Grid.Column="1"/>
+        <Border CornerRadius="0 20 20 0" MouseDown="Border_MouseDown" 
+                Background="#Fa8072" Grid.Column="1">
+            <StackPanel Grid.Column="1">
+                <!--титулка-->
+                <StackPanel Margin="20,45,0,10" Orientation="Horizontal" HorizontalAlignment="Left" Width="173">
+                    <TextBlock Text="16" FontSize="50" Foreground="#ffffff"/>
+
+                    <StackPanel Margin="10 0 0 0" VerticalAlignment="Center" >
+                        <TextBlock Text="Апрель" Foreground="#ffffff" FontSize="24"/>
+                        <TextBlock Text="Воскресение" Foreground="#ffffff" FontSize="14"/>
+
+
+                    </StackPanel>
+
+                </StackPanel>
+                <!--титулка-->
+                <!--титулка-->
+                <!--титулка-->
+                <!--титулка-->
+
+            </StackPanel>
+        </Border>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel>
@@ -58,22 +78,14 @@
 
                 </StackPanel>
                 <Separator Height="0.8" Background="#cacaca" Margin="30 10"/>
-                <TextBlock Text="Апрель" Foreground="#c73f69" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
+                <TextBlock Text="Апрель" Foreground="#Fa8072" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
                 <Calendar/>
             </StackPanel>
-           
-            
-            <StackPanel Grid.Column="1">
-                <!--титулка-->
-                <StackPanel Margin="20 45 30 10" Orientation="Horizontal">
-                    <TextBlock Text="16"/>
 
-                </StackPanel>
-                
-            </StackPanel>
-            
+
+ 
         </Grid>
     </Grid>
-    
-  
+
+
 </Window>

@@ -8,6 +8,7 @@ using System.Windows;
 /* backend Дулин Никита
  backend Витвицкий Данил
 UI/UX Вавилов Данил
+CodeReview Ким Крмаджян
 QA Владимир Балабанов*/
 namespace app
 {
