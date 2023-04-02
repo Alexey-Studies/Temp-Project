@@ -76,8 +76,8 @@
         </Style>
 
         <Style x:Key="textbox" TargetType="TextBox">
-            <Setter Property="Background" Value="#cd5278"/>   <!--это там где заметки-->
-            <Setter Property="Foreground" Value="#eba5bb"/>
+            <Setter Property="Background" Value="#003399"/>   <!--это там где заметки-->
+            <Setter Property="Foreground" Value="#ffffff"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Grid.Column" Value="1"/>
             <Setter Property="Margin" Value="10 0 0 0"/>

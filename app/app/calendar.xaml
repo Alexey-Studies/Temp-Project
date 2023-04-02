@@ -42,7 +42,7 @@
                 
                 <!--задачи-->
                 <!--цвет должен быть менее светлый чем вот этот ораньжевый-->
-                <Border Background="#649fad" CornerRadius="10" HorizontalAlignment="Center" Width="355" Margin="0 30 0 20" Padding="17 15 5 15">
+                <Border Background="#003399" CornerRadius="10" HorizontalAlignment="Center" Width="355" Margin="0 30 0 20" Padding="17 15 5 15">
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -58,7 +58,7 @@
                             </Grid.ColumnDefinitions>
 
                             <fa:ImageAwesome Icon="Pencil" Width="15" Height="15" Foreground="#91bbc5"/>
-                            <TextBlock Text="Добавить заметку" Name="lblNote" Style="{StaticResource textHint}" MouseDown="lblNote_MouseDown" />
+                            <TextBlock Text="Добавить заметку" Name="lblNote" Style="{StaticResource textHint}" MouseDown="lblNote_MouseDown" Foreground="White" />
                             <TextBox x:Name="txtNote" Style="{StaticResource textbox}" TextChanged="txtNote_TextChanged"/>
                         </Grid>
 
@@ -70,7 +70,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <fa:ImageAwesome Icon="Bell" Width="15" Height="15" Foreground="#91bbc5" />
-                                <TextBlock Text="_ _ : _ _ - _ _ : _ _" Name="lblTime" Style="{StaticResource textHint}" MouseDown="lblTime_MouseDown" />
+                                <TextBlock Text="_ _ : _ _ - _ _ : _ _" Name="lblTime" Style="{StaticResource textHint}" MouseDown="lblTime_MouseDown" Foreground="White" />
                                 <TextBox x:Name="txtTime" Style="{StaticResource textbox}" TextChanged="txtTime_TextChanged"/>
                             </Grid>
 
