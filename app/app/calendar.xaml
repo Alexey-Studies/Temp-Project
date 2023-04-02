@@ -41,7 +41,6 @@
                 <TextBlock Text="5 задач 2 дня осталось" Foreground="#ffff" FontSize="16" Margin="35 0 20 0"/>
                 
                 <!--задачи-->
-                <!--цвет должен быть менее светлый чем вот этот ораньжевый-->
                 <Border Background="#003399" CornerRadius="10" HorizontalAlignment="Center" Width="355" Margin="0 30 0 20" Padding="17 15 5 15">
 
                     <Grid>
