@@ -26,7 +26,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel>
                 <!-- панелька года -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 30">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 30">
                     <Button>
                         <fa:ImageAwesome Icon="AngleLeft" Style="{StaticResource angle}"/>
                     </Button>
@@ -39,28 +39,40 @@
                         <fa:ImageAwesome Icon="AngleRight" Style="{StaticResource angle}"/>
                     </Button>
                 </StackPanel>
-            </StackPanel>
 
-            <!-- панелька Месяцов -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="1" Style="{StaticResource buttonMonth}"/>
-                <Button Content="2" Style="{StaticResource buttonMonth}"/>
-                <Button Content="3" Style="{StaticResource buttonMonth}"/>
-                <Button Content="4" Style="{StaticResource buttonMonth}"/>
-                <Button Content="5" Style="{StaticResource buttonMonth}"/>
-                <Button Content="6" Style="{StaticResource buttonMonth}"/>
-                <Button Content="7" Style="{StaticResource buttonMonth}"/>
-                <Button Content="8" Style="{StaticResource buttonMonth}"/>
-                <Button Content="9" Style="{StaticResource buttonMonth}"/>
-                <Button Content="10" Style="{StaticResource buttonMonth}"/>
-                <Button Content="11" Style="{StaticResource buttonMonth}"/>
-                <Button Content="12" Style="{StaticResource buttonMonth}"/>
+
+                <!-- панелька Месяцов -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="1" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="2" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="3" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="4" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="5" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="6" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="7" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="8" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="9" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="10" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="11" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="12" Style="{StaticResource buttonMonth}"/>
+
+                </StackPanel>
+                <Separator Height="0.8" Background="#cacaca" Margin="30 10"/>
+                <TextBlock Text="Апрель" Foreground="#c73f69" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
+                <Calendar/>
             </StackPanel>
+           
+            
+            <StackPanel Grid.Column="1">
+                <!--титулка-->
+                <StackPanel Margin="20 45 30 10" Orientation="Horizontal">
+                    <TextBlock Text="16"/>
+
+                </StackPanel>
+                
+            </StackPanel>
+            
         </Grid>
-
-
-
-
     </Grid>
     
   
