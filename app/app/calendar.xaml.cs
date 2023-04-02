@@ -41,11 +41,11 @@ namespace app
         {
             if (string.IsNullOrEmpty(txtNote.Text) && txtNote.Text.Length > 0)
             {
-                lblNote.Visibility = Visibility.Collapsed;
+                lblNote.Visibility = Visibility.Visible;
             }
             else 
             {
-                lblNote.Visibility = Visibility.Visible;
+                lblNote.Visibility = Visibility.Collapsed;
             }
         }
 
