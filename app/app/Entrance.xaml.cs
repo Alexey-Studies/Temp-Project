@@ -18,5 +18,14 @@ namespace app
             calendar.Show();
             Hide();
         }
+
+        private void Registration(object sender, RoutedEventArgs e)
+        {
+            MainWindow registr = new MainWindow();
+            registr.Show();
+            Hide();
+        }
+
+      
     }
 }
