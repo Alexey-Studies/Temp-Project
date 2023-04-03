@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:app"
               xmlns:fa="http://schemas.fontawesome.io/icons/"
-             StartupUri="AuthorizationWindow.xaml">
+             StartupUri="MainMenu.xaml">
     <Application.Resources>
         <!-- дополнения для авторизации (material design)-->
          <ResourceDictionary>
