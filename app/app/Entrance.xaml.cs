@@ -14,8 +14,8 @@ namespace app
 
         private void Button_enter_Click(object sender, RoutedEventArgs e)
         {
-            Calendar calendar = new Calendar();
-            calendar.Show();
+            MainMenu menu = new MainMenu();
+            menu.Show();
             Hide();
         }
 
@@ -26,6 +26,6 @@ namespace app
             Hide();
         }
 
-      
+
     }
 }
