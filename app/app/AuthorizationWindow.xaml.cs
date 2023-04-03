@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 
 namespace app
 {
-    
+
 
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -20,5 +14,13 @@ namespace app
         {
             InitializeComponent();
         }
+
+        private void entrance_window(object sender, RoutedEventArgs e)
+        {
+            Entrance entrance = new Entrance();
+            entrance.Show();
+            Hide();
+        }
+
     }
 }
