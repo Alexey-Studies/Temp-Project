@@ -14,7 +14,7 @@ namespace app
 
         private void Button_enter_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu menu = new MainMenu();
+            ClientMenu menu = new ClientMenu();
             menu.Show();
             Hide();
         }

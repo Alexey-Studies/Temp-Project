@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Source\Repos\projekt_KI-21\app\app\obj\Debug\
+C:\Users\vdani\Source\Repos\projekt_KI-21\app\app\obj\Debug\
 app
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Source\Repos\projekt_KI-21\app\app\App.xaml
-5-2109597542
+C:\Users\vdani\Source\Repos\projekt_KI-21\app\app\App.xaml
+6-476351156
 
-181891623518
-20-1668736097
-AuthorizationWindow.xaml;calendar.xaml;calendar\Item.xaml;calendar\menuBottom.xaml;Entrance.xaml;
+17-2072203733
+20-1965947794
+AuthorizationWindow.xaml;calendar.xaml;calendar\Item.xaml;calendar\menuBottom.xaml;ClientMenu.xaml;Entrance.xaml;
 
-False
+True
 
