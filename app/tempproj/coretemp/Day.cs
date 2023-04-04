@@ -64,13 +64,6 @@ namespace app
             Console.WriteLine(secondLine);
         }
 
-        protected void generatelessons(int DayOfWeek) // DayOfWeek меняем и делаем в енаме по идее или структурой
-        {
-            List<string> plandays = new List<string>();
-   
-
-
-
-        }
+     
     }
 }
