@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 using System.Windows;
 namespace app
 {
-    internal class Semestr
+    class Semestr
     {
-        public DateTime start { get; set; }
-        public DateTime end { get; set; }
+
+        public void watchData()
+        {
+            var Start = new DateTime(2022, 1, 09, 8, 0, 0);
+            Console.WriteLine(Start.ToString());
+
+            var End = new DateTime(2023, 06, 30, 16, 0, 0);
+            Console.WriteLine(End.ToString());
+
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace app
 {
     class MainClass
     {
-        //int dayofweek => (int)date.DayOfWeek;//в виде лямбды
+       
 
         enum Groups 
         {
@@ -16,24 +16,30 @@ namespace app
         }
         public static void Main()
         {
-            // string nameOF = "Математика";
+            Week week = new Week();
+            Semestr semestr = new Semestr();
+            Lesson lesson = new Lesson();
+            
+            // string nameOF = "Математика";        //работа с файлами (проведённые занятие) (не закончено)
             //Day day = new Day();
             // day.GethoursLessons(nameOF);
-            
+
             DateTime date;                      //получение сегоднешнего дня
-            
             date = DateTime.Now;
             int dayofweek = (int)date.DayOfWeek;
-            Console.WriteLine(dayofweek);
+            //Console.WriteLine(dayofweek);
 
 
-            Week week = new Week();
-            //week.DayOfWeak(dayofweek);
 
-            //Console.WriteLine("Введите желаемый день недели");
-            //string response = Console.ReadLine();
-            //int temp =Convert.ToInt32(response);
-            week.DayLessons(5, (int)Groups.KI);
+            
+
+            //lesson.DayLessons(5, (int)Groups.PI); //полученние у какой группы пары на текущий день
+
+
+
+            /*semestr.watchData();  */          //дата начала семестра/дата конца семестра
+            week.UpDownTypeWeek();      //верхняя нижняя
+
         }
     }
 }
