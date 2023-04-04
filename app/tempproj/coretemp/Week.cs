@@ -106,7 +106,7 @@ namespace app
                             break;
                         case 5:
                             List<string> Friday_PI = new List<string>();
-                            Friday_PI.Add("Численные методы и операции исчисления");
+                            Friday_PI.Add("Численные методыауцазщцлщазцусления");
                             Friday_PI.Add("Численные методы и операции исчисления");
                             Friday_PI.Add("Численные методы и операции исчисления");
                             Friday_PI.Add("Численные методы и операции исчисления");
