@@ -20,11 +20,12 @@ namespace app
             Semestr semestr = new Semestr();
             Lesson lesson = new Lesson();
             Day day = new Day();
-
-
+            Load load = new Load();
+            string leccia = "Руководство призводственной практикой";
             string nameOF = "Математика";        
             string namefile = "HoursOfWork.txt";
-            
+            load.Processing(leccia);
+            load.setBolean(leccia);
 
             //day.GetAllInformationOnFile(namefile);
             //Console.WriteLine();

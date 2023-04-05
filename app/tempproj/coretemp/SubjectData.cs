@@ -1,4 +1,4 @@
-﻿namespace tempproj.coretemp
+﻿namespace app
 {
     internal class SubjectData
     {

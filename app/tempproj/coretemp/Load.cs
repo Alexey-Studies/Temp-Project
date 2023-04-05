@@ -1,44 +1,76 @@
-﻿namespace tempproj.coretemp
+﻿namespace app
 {
-    internal class Load : SubjectData
+    //ЭТО ДЕЛАЛ ВИТВИЦКИЙ Я БЫ ЗА ТАКОЙ ПОЗОР ЗАКОНЧИЛ КАРЬЕРУ ПРОГРАММИСТА
+    class Load 
     {
+        bool Lectures = false;
+        bool PracticalExercises = false;
+        bool LaboratoryWork = false;
+        bool Seminars = false;
+        bool CourseConsultations = false;
+        bool ManagementOfDiplomaDesign = false;
+        bool CourseProjectWork = false;
+        bool Credits = false;
+        bool Exams = false;
+        bool ManagementOfGraduateStudents = false;
+        bool ManagementOfProductionPractice = false;
+        bool ManagementOfEducationalPractice = false;
+        bool CheckingTheWorOfPartTimeStudents = false;
+        bool GEK = false;
+        bool MRK = false;
 
-        enum TypesOfClasses //ВИДЫ ЗАНЯТИЙ															
+        public void Processing(string TypeLessonsGroup)  //обработка
         {
-            Lectures = 0,
-            PracticalExercises = 1,
-            LaboratoryWork = 2,
-            Seminars = 3,
-            CourseConsultations = 4,
-            ManagementOfDiplomaDesign = 5,
-            CourseProjectWork = 6,
-            Credits = 7,
-            Exams = 8,
-            ManagementOfGraduateStudents = 9,
-            ManagementOfProductionPractice = 10,
-            ManagementOfEducationalPractice = 11,
-            CheckingTheWorOfPartTimeStudents = 12,
-            GEK = 13,
-            MRK = 14,
-            Total = 15
+            Day da = new Day();
+
+            string str = da.SearchContextInFile(TypeLessonsGroup, "KI21.txt");
+            int value;
+            int.TryParse(string.Join("", str.Where(c => char.IsDigit(c))), out value);
+            Console.WriteLine($"{TypeLessonsGroup} {value.ToString()}");
+            
         }
-        public void Processing(int type)  //обработка
+        public void setBolean(string TypeLessonsGroup) 
         {
-            switch (type)
+            MainClass mainClass = new MainClass();
+            List<bool> bools = new List<bool>();
+            bools.Add(Lectures);
+            bools.Add(PracticalExercises);
+            bools.Add(LaboratoryWork);
+            bools.Add(Seminars);
+            bools.Add(CourseConsultations);
+            bools.Add(ManagementOfDiplomaDesign);
+            bools.Add(CourseProjectWork);
+            bools.Add(Credits);
+            bools.Add(Exams);
+            bools.Add(ManagementOfGraduateStudents);
+            bools.Add(ManagementOfProductionPractice);
+            bools.Add(ManagementOfEducationalPractice);
+            bools.Add(CheckingTheWorOfPartTimeStudents);
+            bools.Add(GEK);
+            bools.Add(MRK);
+
+            int counter = 0;
+            try
             {
-                case 0:
-
-                    break;
-                case 15:
-                //я не понимаю как работает это
-
-                default:
-                    break;
+                string line;
+                StreamReader file = new StreamReader("KI21.txt");
+                while ((line = file.ReadLine()) != null)
+                {
+                    if (line.Contains(TypeLessonsGroup))
+                    {
+                        break;
+                    }
+                    counter++;
+                }
+                /*Console.WriteLine("Line number: {0}", counter);*/ //показывает на какой строчке премет
+                file.Close();
+                bools[counter]= true;
 
             }
-        }
+            catch (Exception e) { Console.WriteLine("ошибка чтения: " + e.Message); }
 
 
+        } 
 
     }
 }
