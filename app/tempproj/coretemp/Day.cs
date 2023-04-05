@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.IO; //для сохранения данных в txt
 using System.Reflection.PortableExecutable;
+using System.Text.RegularExpressions;
 
 /* backend Дулин Никита
  backend Витвицкий Данил
@@ -19,7 +20,7 @@ namespace app
     class Day 
     {
         
-        /*это надо распределить по файлам по идее (Витвицкий)*/
+        
         public int hoursofwork { get; set; }// реализвать функцией ( файлы чтения->поиск нужной строки -> поиск цифр ->применение из переменной)
       
         public void GetAllHoursLessons() 
@@ -33,7 +34,7 @@ namespace app
                 stream1.Close();
             }
         }
-        public void GethoursLessons(string NameDiscipline) //добавляем в параметры название предмета  enum/struct ищем и выводм результат 
+        public string GethoursLessons(string NameDiscipline)  
         {
             int counter = 0;
             try
@@ -50,34 +51,53 @@ namespace app
                 }
                 /*Console.WriteLine("Line number: {0}", counter);*/ //показывает на какой строчке премет
                 file.Close();
-                Console.ReadLine();
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("ошибка чтения: " + e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("чтение выполнено успешно");
-            }
+            catch (Exception e) {Console.WriteLine("ошибка чтения: " + e.Message);}
+            finally {Console.WriteLine("чтение выполнено успешно");}
+
             string secondLine = File.ReadLines("HoursOfWork.txt").ElementAtOrDefault(counter);
             Console.WriteLine(secondLine);
             
             string[] readText = File.ReadAllLines("HoursOfWork.txt");
-
-            using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true))
+            using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true)) //если поставить false то файлик будет стираться
             {
-                secfile.Close();
+                
                 if (counter == readText.Length)
                 {
                     Console.WriteLine("Такой предмет не найден");
                 }
+                secfile.Close();
             }
-            
-
+             return  secondLine;
             
         }
+        public void SetHoursLessons(string NameDiscipline) 
+        {
+            
+            string str = GethoursLessons(NameDiscipline); 
+            int value;
+            int.TryParse(string.Join("", str.Where(c => char.IsDigit(c))), out value);
+            value=value - 2;
+            string valuestr=Convert.ToString(value);
+            string newstr = NameDiscipline +" "+ valuestr;
 
-     
+            ReplaceInFile("HoursOfWork.txt", str, newstr);
+
+
+        }
+         private void ReplaceInFile(string filePath, string searchText, string replaceText)
+         {
+            StreamReader reader = new StreamReader(filePath);
+            string content = reader.ReadToEnd();
+            reader.Close();
+
+            content = Regex.Replace(content, searchText, replaceText);
+
+            StreamWriter writer = new StreamWriter(filePath);
+            writer.Write(content);
+            writer.Close();
+            
+         }
+
     }
 }

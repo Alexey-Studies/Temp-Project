@@ -28,7 +28,7 @@ namespace app
 
             Console.WriteLine(Math.Ceiling(weekNumber));
 
-            if (myDateTime.DayOfYear < 7) { Console.WriteLine(typeweek = "сейчас нижняя неделя"); }
+            if (myDateTime.DayOfYear < 7) { Console.WriteLine(typeweek = "сейчас нижняя неделя"); }//уточнить
             if ((Math.Ceiling(weekNumber+0.3) % 2 == 0)) { typeweek = "сейчас верхняя неделя"; } else { typeweek = "сейчас нижняя неделя"; }
             Console.WriteLine(typeweek);
         }

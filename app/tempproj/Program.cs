@@ -20,10 +20,13 @@ namespace app
             Semestr semestr = new Semestr();
             Lesson lesson = new Lesson();
 
-            string nameOF  = "ООП";        //работа с файлами (проведённые занятие) (не закончено)
+            string nameOF  = "Математика";        //работа с файлами (проведённые занятие) (не закончено)
             Day day = new Day();
-           
-            day.GethoursLessons(nameOF);
+            //day.GethoursLessons(nameOF);
+
+            day.SetHoursLessons(nameOF);
+
+
 
             DateTime date;                      //получение сегоднешнего дня
             date = DateTime.Now;
