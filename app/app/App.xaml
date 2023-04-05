@@ -115,7 +115,7 @@
                     <ControlTemplate TargetType="{x:Type CalendarItem}">
                         <ControlTemplate.Resources>
                             <DataTemplate x:Key="{x:Static CalendarItem.DayTitleTemplateResourceKey}">
-                                <TextBlock Foreground="#FF333333" FontFamily="Trebuchet  MS" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Center" Margin="10" Text="{Binding}" VerticalAlignment="Center"/>
+                                <TextBlock Foreground="Beige" FontFamily="Trebuchet  MS" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Center" Margin="10" Text="{Binding}" VerticalAlignment="Center"/>
                             </DataTemplate>
                         </ControlTemplate.Resources>
                        

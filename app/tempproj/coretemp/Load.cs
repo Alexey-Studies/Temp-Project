@@ -29,7 +29,7 @@
             Console.WriteLine($"{TypeLessonsGroup} {value.ToString()}");
             
         }
-        public void setBolean(string TypeLessonsGroup) 
+        public void setBolean( string[] TypeLessonsGroup) //передаём массивом
         {
             MainClass mainClass = new MainClass();
             List<bool> bools = new List<bool>();
@@ -52,20 +52,25 @@
             int counter = 0;
             try
             {
+                int i = 0;
+                int k = 0;
                 string line;
-                StreamReader file = new StreamReader("KI21.txt");
-                while ((line = file.ReadLine()) != null)
-                {
-                    if (line.Contains(TypeLessonsGroup))
-                    {
-                        break;
-                    }
-                    counter++;
-                }
-                /*Console.WriteLine("Line number: {0}", counter);*/ //показывает на какой строчке премет
-                file.Close();
-                bools[counter]= true;
 
+                while ( i< TypeLessonsGroup.Length)
+                {
+                    StreamReader file = new StreamReader("KI21.txt");
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        while (line.Contains(TypeLessonsGroup[i]))
+                        {
+                            i++;
+                            bools[counter] = true;
+                            counter = -1;
+                        }
+                        counter++;
+                    }
+                    file.Close();
+                }
             }
             catch (Exception e) { Console.WriteLine("ошибка чтения: " + e.Message); }
 

@@ -7,19 +7,21 @@
         xmlns:uc="clr-namespace:app.calendar"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="Календарь" Height="590" Width="900" 
+        Title="Календарь" Height="1000" Width="1500" 
         FontFamily="Trebuchet MS" WindowStartupLocation="CenterScreen"
         WindowStyle="none" AllowsTransparency="True" 
         Background="Transparent">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.2*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="500"/>
         </Grid.ColumnDefinitions>
-        <Border CornerRadius="20 0 0 20" Background="#fefefe"/>
+        <Border CornerRadius="20 0 0 20" Background="#fefefe">
+            <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarStyle1}" Margin="-72,587,460,65"/>
+        </Border>
 
         <Border CornerRadius="0 20 20 0" MouseDown="Border_MouseDown" 
-                Background="#Fa8072" Grid.Column="1">
+                Background="#Fa8072" Grid.Column="1" Margin="0,0,0,0">
             <!--правая титулка-->
             <StackPanel Grid.Column="1">
                 <StackPanel Margin="30 45 30 10" Orientation="Horizontal" >
@@ -128,13 +130,14 @@
 
                 </StackPanel>
                 <Separator Height="0.8" Background="#cacaca" Margin="30 10"/>
-                <TextBlock Text="Апрель" Foreground="#Fa8072" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
-                <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarStyle1}"/>
+                <TextBlock Text="январь" Foreground="#Fa8072" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
             </StackPanel>
 
 
  
         </Grid>
+        <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarStyle1}" Margin="444,215,444,437" Grid.ColumnSpan="2"/>
+        <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarStyle1}" Margin="-82,215,470,437"/>
     </Grid>
 
 

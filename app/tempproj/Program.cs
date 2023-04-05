@@ -22,10 +22,14 @@ namespace app
             Day day = new Day();
             Load load = new Load();
             string leccia = "Руководство призводственной практикой";
-            string nameOF = "Математика";        
+            string leccia2 = "Проверка работ студентов заочников";
+            string nameOF = "Математика";
             string namefile = "HoursOfWork.txt";
-            load.Processing(leccia);
-            load.setBolean(leccia);
+
+            string[] strings = {leccia, leccia2 };
+
+
+            load.setBolean(strings);
 
             //day.GetAllInformationOnFile(namefile);
             //Console.WriteLine();
