@@ -23,9 +23,9 @@ namespace app
 
         public int hoursofwork { get; set; }// реализвать функцией ( файлы чтения->поиск нужной строки -> поиск цифр ->применение из переменной)
 
-        public void GetAllHoursLessons()
+        public void GetAllInformationOnFile(string Filename)
         {
-            using (FileStream stream1 = File.OpenRead("HoursOfWork.txt"))
+            using (FileStream stream1 = File.OpenRead(Filename))
             {
                 byte[] array = new byte[stream1.Length];
                 stream1.Read(array, 0, array.Length);
@@ -34,13 +34,13 @@ namespace app
                 stream1.Close();
             }
         }
-        public string GethoursLessons(string NameDiscipline)
+        public string SearchContextInFile(string NameDiscipline,string Filename)
         {
             int counter = 0;
             try
             {
                 string line;
-                StreamReader file = new StreamReader("HoursOfWork.txt");
+                StreamReader file = new StreamReader(Filename);
                 while ((line = file.ReadLine()) != null)
                 {
                     if (line.Contains(NameDiscipline))
@@ -55,11 +55,11 @@ namespace app
             catch (Exception e) { Console.WriteLine("ошибка чтения: " + e.Message); }
             finally { /*Console.WriteLine("чтение выполнено успешно");*/ } //успешное чтение документа
 
-            string secondLine = File.ReadLines("HoursOfWork.txt").ElementAtOrDefault(counter);
+            string secondLine = File.ReadLines(Filename).ElementAtOrDefault(counter);
             //Console.WriteLine("Найден предмет: " + secondLine);
 
-            string[] readText = File.ReadAllLines("HoursOfWork.txt");
-            using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true)) //если поставить false то файлик будет стираться
+            string[] readText = File.ReadAllLines(Filename);
+            using (StreamWriter secfile = new StreamWriter(Filename, true)) //если поставить false то файлик будет стираться
             {
 
                 if (counter == readText.Length)
@@ -71,19 +71,20 @@ namespace app
             return secondLine;
 
         }
-        public void SetHoursLessons(string NameDiscipline)
+        public void SetHoursLessons(string NameDiscipline,string Filename)
         {
 
-            string str = GethoursLessons(NameDiscipline);
+            string str = SearchContextInFile(NameDiscipline, Filename);
             int value;
             int.TryParse(string.Join("", str.Where(c => char.IsDigit(c))), out value);
             value = value - 2;
-            if (value<0) { Console.WriteLine("План выполнен все занятие проведены");}
+            while (value <= 0) { Console.WriteLine("План выполнен"); return; }
+            
             string valuestr = Convert.ToString(value);
             string newstr = NameDiscipline + " " + valuestr;
 
             ReplaceInFile("HoursOfWork.txt", str, newstr);
-            Console.WriteLine($"Новое значение {GethoursLessons(NameDiscipline)}");
+            Console.WriteLine($"Новое значение {SearchContextInFile(NameDiscipline, Filename)}");
 
         }
         private void ReplaceInFile(string filePath, string searchText, string replaceText)
