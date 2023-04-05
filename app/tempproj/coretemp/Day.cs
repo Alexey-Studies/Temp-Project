@@ -15,7 +15,7 @@ CodeReview Ким Крмаджян
 QA Владимир Балабанов*/
 namespace app
 {
-
+    
     class Day 
     {
         
@@ -48,7 +48,7 @@ namespace app
                     }
                     counter++;
                 }
-                Console.WriteLine("Line number: {0}", counter);
+                /*Console.WriteLine("Line number: {0}", counter);*/ //показывает на какой строчке премет
                 file.Close();
                 Console.ReadLine();
             }
@@ -62,6 +62,20 @@ namespace app
             }
             string secondLine = File.ReadLines("HoursOfWork.txt").ElementAtOrDefault(counter);
             Console.WriteLine(secondLine);
+            
+            string[] readText = File.ReadAllLines("HoursOfWork.txt");
+
+            using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true))
+            {
+                secfile.Close();
+                if (counter == readText.Length)
+                {
+                    Console.WriteLine("Такой предмет не найден");
+                }
+            }
+            
+
+            
         }
 
      

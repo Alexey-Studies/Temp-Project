@@ -19,10 +19,11 @@ namespace app
             Week week = new Week();
             Semestr semestr = new Semestr();
             Lesson lesson = new Lesson();
-            
-            // string nameOF = "Математика";        //работа с файлами (проведённые занятие) (не закончено)
-            //Day day = new Day();
-            // day.GethoursLessons(nameOF);
+
+            string nameOF  = "ООП";        //работа с файлами (проведённые занятие) (не закончено)
+            Day day = new Day();
+           
+            day.GethoursLessons(nameOF);
 
             DateTime date;                      //получение сегоднешнего дня
             date = DateTime.Now;
@@ -38,7 +39,7 @@ namespace app
 
 
             /*semestr.watchData();  */          //дата начала семестра/дата конца семестра
-            week.UpDownTypeWeek();      //верхняя нижняя
+           /* week.UpDownTypeWeek(); */     //верхняя нижняя
 
         }
     }
