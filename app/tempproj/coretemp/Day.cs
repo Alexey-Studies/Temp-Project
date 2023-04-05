@@ -85,7 +85,7 @@ namespace app
 
 
         }
-         private void ReplaceInFile(string filePath, string searchText, string replaceText)
+        private void ReplaceInFile(string filePath, string searchText, string replaceText)
          {
             StreamReader reader = new StreamReader(filePath);
             string content = reader.ReadToEnd();
