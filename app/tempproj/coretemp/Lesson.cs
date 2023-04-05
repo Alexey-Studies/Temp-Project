@@ -19,6 +19,7 @@ namespace app
                             List<string> Monday_KI = new List<string>();
                             Monday_KI.Add(englishLanguage.Name);
                             Monday_KI.Add(higherMathematics.Name);
+                            Console.WriteLine("Предметы на понедельник для группы КИ-21:");
                             foreach (var ex in Monday_KI) { Console.WriteLine(ex); }
                             break;
                         case 2:
@@ -28,6 +29,7 @@ namespace app
                             Tuesday_KI.Add("Моделирование цифровых узлов компьютерных систем");
                             Tuesday_KI.Add("Численные методы и операции исчисления");
                             Tuesday_KI.Add("-");
+                            Console.WriteLine("Предметы на вторник для группы КИ-21:");
                             foreach (var ex in Tuesday_KI) { Console.WriteLine(ex); }
                             break;
                         case 3:
@@ -37,6 +39,7 @@ namespace app
                             Wednesday_KI.Add("Численные методы и операции исчисления");
                             Wednesday_KI.Add("Моделирование цифровых узлов компьютерных систем");
                             Wednesday_KI.Add("-");
+                            Console.WriteLine("Предметы на среду для группы КИ-21:");
                             foreach (var ex in Wednesday_KI) { Console.WriteLine(ex); }
                             break;
                         case 4:
@@ -46,6 +49,7 @@ namespace app
                             Thursday_KI.Add("Моделирование цифровых узлов компьютерных систем");
                             Thursday_KI.Add("Численные методы и операции исчисления");
                             Thursday_KI.Add("Моделирование цифровых устройств");
+                            Console.WriteLine("Предметы на четверг для группы КИ-21:");
                             foreach (var ex in Thursday_KI) { Console.WriteLine(ex); }
                             break;
                         case 5:
@@ -55,6 +59,7 @@ namespace app
                             Friday_KI.Add("Моделирование цифровых узлов компьютерных систем");
                             Friday_KI.Add("Численные методы и операции исчисления");
                             Friday_KI.Add("Системное программирование");
+                            Console.WriteLine("Предметы на пятницу для группы КИ-21:");
                             foreach (var ex in Friday_KI) { Console.WriteLine(ex); }
                             break;
                     }
@@ -69,6 +74,7 @@ namespace app
                             Monday_PI.Add("Численные методы и операции исчисления");
                             Monday_PI.Add("-");
                             Monday_PI.Add("-");
+                            Console.WriteLine("Предметы на понедельник для группы ПИ-21:");
                             foreach (var ex in Monday_PI) { Console.WriteLine(ex); }
                             break;
                         case 2:
@@ -78,6 +84,7 @@ namespace app
                             Tuesday_PI.Add("Аналоговая семотехника");
                             Tuesday_PI.Add("Численные методы");
                             Tuesday_PI.Add("-");
+                            Console.WriteLine("Предметы на вторник для группы ПИ-21:");
                             foreach (var ex in Tuesday_PI) { Console.WriteLine(ex); }
                             break;
                         case 3:
@@ -87,6 +94,7 @@ namespace app
                             Wednesday_PI.Add("Цифровая схемотехника");
                             Wednesday_PI.Add("Русский язык");
                             Wednesday_PI.Add("Системное программирование");
+                            Console.WriteLine("Предметы на среду для группы ПИ-21:");
                             foreach (var ex in Wednesday_PI) { Console.WriteLine(ex); }
                             break;
                         case 4:
@@ -96,6 +104,7 @@ namespace app
                             Thursday_PI.Add("-");
                             Thursday_PI.Add("Системное программирование");
                             Thursday_PI.Add("-");
+                            Console.WriteLine("Предметы на четверг для группы ПИ-21:");
                             foreach (var ex in Thursday_PI) { Console.WriteLine(ex); }
                             break;
                         case 5:
@@ -105,6 +114,7 @@ namespace app
                             Friday_PI.Add("Моделирование цифровых узлов компьютерных систем");
                             Friday_PI.Add("-");
                             Friday_PI.Add("-");
+                            Console.WriteLine("Предметы на пятницу для группы ПИ-21:");
                             foreach (var ex in Friday_PI) { Console.WriteLine(ex); }
                             break;
                     }

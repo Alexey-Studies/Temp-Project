@@ -26,7 +26,7 @@ namespace app
             double weekNumber = (myDateTime.DayOfYear + firstDayOfYear) / 7;
 
 
-            Console.WriteLine(Math.Ceiling(weekNumber));
+            Console.WriteLine("В данный момент: " + Math.Ceiling(weekNumber) + " неделя");
 
             if (myDateTime.DayOfYear < 7) { Console.WriteLine(typeweek = "сейчас нижняя неделя"); }//уточнить
             if ((Math.Ceiling(weekNumber+0.3) % 2 == 0)) { typeweek = "сейчас верхняя неделя"; } else { typeweek = "сейчас нижняя неделя"; }

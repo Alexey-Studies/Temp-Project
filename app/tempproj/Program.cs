@@ -22,7 +22,7 @@ namespace app
 
             string nameOF  = "Математика";        //работа с файлами (проведённые занятие) (не закончено)
             Day day = new Day();
-            //day.GethoursLessons(nameOF);
+            //day.GethoursLessons(nameOF);(+)
 
             day.SetHoursLessons(nameOF);
 
@@ -37,12 +37,12 @@ namespace app
 
             
 
-            //lesson.DayLessons(5, (int)Groups.PI); //полученние у какой группы пары на текущий день
+            //lesson.DayLessons(5, (int)Groups.PI)(+); //полученние у какой группы пары на текущий день
 
 
 
-            /*semestr.watchData();  */          //дата начала семестра/дата конца семестра
-           /* week.UpDownTypeWeek(); */     //верхняя нижняя
+            /*semestr.watchData();(+)  */          //дата начала семестра/дата конца семестра
+           /* week.UpDownTypeWeek();(+) */     //верхняя нижняя
 
         }
     }

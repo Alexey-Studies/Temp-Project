@@ -56,7 +56,7 @@ namespace app
             finally {Console.WriteLine("чтение выполнено успешно");}
 
             string secondLine = File.ReadLines("HoursOfWork.txt").ElementAtOrDefault(counter);
-            Console.WriteLine(secondLine);
+            Console.WriteLine("Найден предмет: " + secondLine);
             
             string[] readText = File.ReadAllLines("HoursOfWork.txt");
             using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true)) //если поставить false то файлик будет стираться
