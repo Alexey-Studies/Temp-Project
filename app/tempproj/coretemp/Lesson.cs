@@ -17,11 +17,8 @@ namespace app
                     {
                         case 1:
                             List<string> Monday_KI = new List<string>();
-                            Monday_KI.Add(modelcifuz_sem);
-                            Monday_KI.Add("Организация баз данных");
-                            Monday_KI.Add("Численные методы и операции исчисления");
-                            Monday_KI.Add("Моделирование цифровых узлов компьютерных систем");
-                            Monday_KI.Add("Английский язык");
+                            Monday_KI.Add(englishLanguage.Name);
+                            Monday_KI.Add(higherMathematics.Name);
                             foreach (var ex in Monday_KI) { Console.WriteLine(ex); }
                             break;
                         case 2:
