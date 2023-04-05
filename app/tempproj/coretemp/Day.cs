@@ -16,14 +16,14 @@ CodeReview Ким Крмаджян
 QA Владимир Балабанов*/
 namespace app
 {
-    
-    class Day 
+
+    class Day
     {
-        
-        
+
+
         public int hoursofwork { get; set; }// реализвать функцией ( файлы чтения->поиск нужной строки -> поиск цифр ->применение из переменной)
-      
-        public void GetAllHoursLessons() 
+
+        public void GetAllHoursLessons()
         {
             using (FileStream stream1 = File.OpenRead("HoursOfWork.txt"))
             {
@@ -34,13 +34,13 @@ namespace app
                 stream1.Close();
             }
         }
-        public string GethoursLessons(string NameDiscipline)  
+        public string GethoursLessons(string NameDiscipline)
         {
             int counter = 0;
             try
             {
                 string line;
-                 StreamReader file = new StreamReader("HoursOfWork.txt");
+                StreamReader file = new StreamReader("HoursOfWork.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     if (line.Contains(NameDiscipline))
@@ -52,41 +52,42 @@ namespace app
                 /*Console.WriteLine("Line number: {0}", counter);*/ //показывает на какой строчке премет
                 file.Close();
             }
-            catch (Exception e) {Console.WriteLine("ошибка чтения: " + e.Message);}
-            finally {Console.WriteLine("чтение выполнено успешно");}
+            catch (Exception e) { Console.WriteLine("ошибка чтения: " + e.Message); }
+            finally { /*Console.WriteLine("чтение выполнено успешно");*/ } //успешное чтение документа
 
             string secondLine = File.ReadLines("HoursOfWork.txt").ElementAtOrDefault(counter);
-            Console.WriteLine("Найден предмет: " + secondLine);
-            
+            //Console.WriteLine("Найден предмет: " + secondLine);
+
             string[] readText = File.ReadAllLines("HoursOfWork.txt");
             using (StreamWriter secfile = new StreamWriter("HoursOfWork.txt", true)) //если поставить false то файлик будет стираться
             {
-                
+
                 if (counter == readText.Length)
                 {
                     Console.WriteLine("Такой предмет не найден");
                 }
                 secfile.Close();
             }
-             return  secondLine;
-            
+            return secondLine;
+
         }
-        public void SetHoursLessons(string NameDiscipline) 
+        public void SetHoursLessons(string NameDiscipline)
         {
-            
-            string str = GethoursLessons(NameDiscipline); 
+
+            string str = GethoursLessons(NameDiscipline);
             int value;
             int.TryParse(string.Join("", str.Where(c => char.IsDigit(c))), out value);
-            value=value - 2;
-            string valuestr=Convert.ToString(value);
-            string newstr = NameDiscipline +" "+ valuestr;
+            value = value - 2;
+            if (value<0) { Console.WriteLine("План выполнен все занятие проведены");}
+            string valuestr = Convert.ToString(value);
+            string newstr = NameDiscipline + " " + valuestr;
 
             ReplaceInFile("HoursOfWork.txt", str, newstr);
-
+            Console.WriteLine($"Новое значение {GethoursLessons(NameDiscipline)}");
 
         }
         private void ReplaceInFile(string filePath, string searchText, string replaceText)
-         {
+        {
             StreamReader reader = new StreamReader(filePath);
             string content = reader.ReadToEnd();
             reader.Close();
@@ -96,8 +97,8 @@ namespace app
             StreamWriter writer = new StreamWriter(filePath);
             writer.Write(content);
             writer.Close();
-            
-         }
+
+        }
 
     }
 }

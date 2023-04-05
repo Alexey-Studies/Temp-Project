@@ -17,8 +17,8 @@ namespace app
                     {
                         case 1:
                             List<string> Monday_KI = new List<string>();
-                            Monday_KI.Add(englishLanguage.Name);
-                            Monday_KI.Add(higherMathematics.Name);
+                            //Monday_KI.Add(englishLanguage.Name);
+                            //Monday_KI.Add(higherMathematics.Name);
                             Console.WriteLine("Предметы на понедельник для группы КИ-21:");
                             foreach (var ex in Monday_KI) { Console.WriteLine(ex); }
                             break;

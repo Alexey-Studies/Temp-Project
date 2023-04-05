@@ -13,10 +13,10 @@ namespace app
         public void watchData()
         {
             var Start = new DateTime(2022, 1, 09, 8, 0, 0);
-            Console.WriteLine("Пара начинается:" + Start.ToString());
+            Console.WriteLine("Семестр начинается:" + Start.ToString());
 
-            var End = new DateTime("Пара заканчивается:" + 2023, 06, 30, 16, 0, 0);
-            Console.WriteLine(End.ToString());
+            var End = new DateTime(2023, 06, 30, 16, 0, 0);
+            Console.WriteLine("Семестр начинается:" + End.ToString());
 
         }
     }
