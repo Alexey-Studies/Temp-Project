@@ -14,8 +14,8 @@ namespace app
     {
 
         public string typeweek { get; set; }
-        
-        public void UpDownTypeWeek() 
+        //определение верхней/нижней недели
+        public void UpDownTypeWeek() //переделать если начала семестра выпало на выходные
         {
            
 
@@ -28,8 +28,8 @@ namespace app
 
             Console.WriteLine("В данный момент: " + Math.Ceiling(weekNumber) + " неделя");
 
-            if (myDateTime.DayOfYear < 7) { Console.WriteLine(typeweek = "сейчас нижняя неделя"); }//уточнить
-            if ((Math.Ceiling(weekNumber+0.3) % 2 == 0)) { typeweek = "сейчас верхняя неделя"; } else { typeweek = "сейчас нижняя неделя"; }
+            if (myDateTime.DayOfYear < 7) { Console.WriteLine(typeweek = "сейчас нижняя неделя"); }
+            if ((Math.Round(weekNumber+0.3) % 2 == 0)) { typeweek = "сейчас верхняя неделя"; } else { typeweek = "сейчас нижняя неделя"; }
             Console.WriteLine(typeweek);
         }
     }

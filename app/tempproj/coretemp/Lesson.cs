@@ -4,10 +4,20 @@ namespace app
 {
     internal class Lesson : SubjectData
     {
+
+        IEnumerable<int> ProduceEvenNumbers() 
+        {
+            yield return 1;
+            yield return 2;
+            yield return 3;
+            yield return 2;
+            yield return 1;
+            yield return 1;
+        }
         public string Name { get; set; }
         public string Group { get; set; }
         public string Type { get; set; }
-
+        //передавать день (уточнения на праздничный)  делаем функцию с точкизрения преподавателя
         public void DayLessons(int day, int Group)
         {
             switch (Group)

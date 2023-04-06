@@ -49,7 +49,7 @@
             bools.Add(GEK);
             bools.Add(MRK);
 
-            int counter = 0;
+            int counter = 0;//ОШИБКА
             try
             {
                 int i = 0;

@@ -29,13 +29,17 @@ namespace app
             string[] strings = {leccia, leccia2 };
 
 
-            load.setBolean(strings);
+            load.setBolean(strings); //не рабочая
 
-            //day.GetAllInformationOnFile(namefile);
-            //Console.WriteLine();
-            //Console.WriteLine(day.SearchContextInFile(nameOF, namefile));
-            //Console.WriteLine();
-            //day.SetHoursLessons(nameOF, namefile);
+
+
+
+
+            day.GetAllInformationOnFile(namefile);
+            Console.WriteLine();
+            Console.WriteLine(day.SearchContextInFile(nameOF, namefile));
+            Console.WriteLine();
+            day.SetHoursLessons(nameOF, namefile);
             //Console.WriteLine();
 
 
